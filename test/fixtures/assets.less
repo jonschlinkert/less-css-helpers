@@ -1,13 +1,6 @@
-@theme: 'whitewash';
-@assets: assets(theme, "theme");
-
-
-.d() {color: blue}
-.d() {width: 10px}
-
+@theme: "blah";
+@assets: assets("@{theme}");
 
 .image {
-  .d();
-  background: transparent url('@{assets}/img/bar.jpg') 0 0 no-repeat;
+  background: url("@{assets}/bar.png");
 }
-

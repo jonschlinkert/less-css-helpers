@@ -4,13 +4,9 @@ var fs = require('fs');
 var less = require('less');
 var register = require('../')(less);
 
-
 register.helpers({
-  assets: function (assets) {
-    return dir;
-  },
-  prefix: function (assets) {
-    return 'foo';
+  assets: function (path) {
+    return 'dist/' + path.value + '/assets/css';
   },
   'multiple-args': function (arg1, arg2) {
     return (((arg1.value * 1) + (arg2.value))) + arg1.unit.numerator[0];

@@ -26,10 +26,10 @@ module.exports = function register(less, options) {
         this.options = options;
       }
       if (!('data' in this)) {
-        this.data = options.data;
+        this.data = options.data || {};
       }
       if (!('file' in this)) {
-        this.file = options.file;
+        this.file = options.file || {};
       }
       var res = fn.apply(this, arguments);
       return typeof res !== "object"

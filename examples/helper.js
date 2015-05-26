@@ -4,11 +4,8 @@ var fs = require('fs');
 var less = require('less');
 var register = require('../')(less);
 
-register.helper('assets', function (assets) {
-  return 'foo';
-});
-register.helper('prefix', function (assets) {
-  return 'quux';
+register.helper('assets', function (path) {
+  return 'dist/' + path.value + '/assets/css';
 });
 register.helper('multiple-args', function (arg1, arg2) {
   return ((arg1.value * 1) + (arg2.value)) + arg1.unit.numerator[0];
@@ -31,7 +28,7 @@ register.helper('to-hex', function (r, g, b) {
 
 
 render('test/fixtures/assets.less', function (err, css) {
-  // console.log(css);
+  console.log(css);
 })
 
 function render(fp, cb) {
