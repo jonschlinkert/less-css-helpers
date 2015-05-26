@@ -4,6 +4,8 @@
 
 ## Install
 
+HEADS UP! This currently is not an npm module!!!! I need to come up with a different name, this is a placeholder!!!
+
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
@@ -11,6 +13,8 @@ $ npm i less-helpers --save
 ```
 
 ## Usage
+
+HEADS UP! This currently is not an npm module!!!! I need to come up with a different name, this is a placeholder!!!
 
 ```js
 var less = require('less');
