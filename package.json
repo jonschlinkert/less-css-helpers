@@ -1,0 +1,37 @@
+{
+  "name": "css-functions",
+  "description": "helper functions that can be registered and used with rework, less, stylus and sass, the same way that handlebars helpers are used in temlpates.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/css-functions",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonschlinkert/css-functions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/css-functions/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/css-functions/blob/master/LICENSE"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "less": "^2.5.0",
+    "mocha": "*"
+  },
+  "keywords": []
+}
