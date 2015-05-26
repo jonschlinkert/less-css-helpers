@@ -7,14 +7,23 @@
 
 'use strict';
 
+var extend = require('extend-shallow');
+
 module.exports = function register(less, options) {
   options = options || {};
   less.helpers = less.functions.functionRegistry._data;
+  var render = less.render;
+
+  less.render = function (str, opts, cb) {
+    extend(options, opts);
+    return render.call(less, str, opts, cb);
+  };
 
   exports.helper = function(name, fn) {
     if (typeof name !== 'string') {
       throw new TypeError('less-helpers.helper expects `name` to be a string.');
     }
+
     var key = name.toLowerCase();
     if (options.strict && less.helpers.hasOwnProperty(key.toLowerCase())) {
       return;

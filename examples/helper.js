@@ -2,9 +2,11 @@
 
 var fs = require('fs');
 var less = require('less');
+var extend = require('extend-shallow');
 var register = require('../')(less);
 
 register.helper('assets', function (path) {
+  console.log(this.options)
   return 'dist/' + path.value + '/assets/css';
 });
 register.helper('multiple-args', function (arg1, arg2) {
@@ -27,24 +29,20 @@ register.helper('to-hex', function (r, g, b) {
 });
 
 
-render('test/fixtures/assets.less', function (err, css) {
+render('test/fixtures/assets.less', {assets: 'dist/assets'}, function (err, css) {
   console.log(css);
 })
 
-function render(fp, cb) {
+function render(fp, options, cb) {
   var str = fs.readFileSync(fp, 'utf8');
-  var opts = {
-    globalVars: {
-      a: 'a',
-      b: 'b',
-      c: 'c'
-    },
+  var opts = extend({
+    globalVars: {a: 'a', b: 'b', c: 'c'},
     filename: fp,
     rootpath: 'test/fixtures'
-  };
+  }, options);
+
   less.render(str, opts, function (err, res) {
     if (err) return console.log(err);
-    // console.log(less)
     cb(null, res.css);
   });
 }
