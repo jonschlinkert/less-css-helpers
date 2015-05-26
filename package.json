@@ -1,6 +1,6 @@
 {
   "name": "less-helpers",
-  "description": "helper functions that can be registered and used with less, the same way that handlebars helpers are used in temlpates.",
+  "description": "register helper functions that can be used with LESS, the same way that handlebars helpers are used in templates.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/less-helpers",
   "author": {

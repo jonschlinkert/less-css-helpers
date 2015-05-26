@@ -1,6 +1,6 @@
 # less-helpers [![NPM version](https://badge.fury.io/js/less-helpers.svg)](http://badge.fury.io/js/less-helpers)
 
-> helper functions that can be registered and used with less, the same way that handlebars helpers are used in temlpates.
+> register helper functions that can be used with LESS, the same way that handlebars helpers are used in templates.
 
 ## Install
 
