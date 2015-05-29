@@ -1,5 +1,5 @@
 /*!
- * less-helpers <https://github.com/jonschlinkert/less-helpers>
+ * less-css-helpers <https://github.com/jonschlinkert/less-css-helpers>
  *
  * Copyright (c) 2015, Jon Schlinkert.
  * Licensed under the MIT License.
